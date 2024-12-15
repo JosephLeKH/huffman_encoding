@@ -83,3 +83,43 @@ The program provides a complete compression and decompression pipeline. It encod
 1. **Compile the project:**  
    ```bash
    make
+
+	2.	Run the interactive program:
+
+./huffman
+
+
+	3.	Follow on-screen prompts to compress or decompress files.
+
+Testing
+
+Adding Custom Tests
+
+Use the round-trip compression-decompression method to validate correctness:
+	1.	Compress a file.
+	2.	Decompress the result.
+	3.	Compare the output with the original file.
+
+Example Usage
+	1.	Compress a File:
+	•	Input: res/example.txt
+	•	Output: res/example.txt.huf
+	2.	Decompress a File:
+	•	Input: res/example.txt.huf
+	•	Output: res/unhuf.example.txt
+
+Additional Notes
+	•	Compression efficiency depends on the input file’s redundancy. Files with repeated patterns compress well, while already compressed files may slightly grow in size.
+	•	The project ensures no memory leaks using proper tree deallocation and careful memory management.
+	•	Non-text files (e.g., images, audio) can also be compressed and decompressed accurately.
+
+Known Limitations
+	•	Input Restrictions: The input must contain at least two distinct characters to be Huffman-encodable.
+	•	Compression Growth: Huffman encoding may not reduce the size of already compressed files.
+
+Acknowledgments
+
+This project was inspired by the CS106B curriculum and the pioneering work of David Huffman. Special thanks to the teaching team for their warmup exercises and starter code, which facilitated a deeper understanding of the algorithm.
+
+Enjoy compressing and decompressing! 🎉
+
